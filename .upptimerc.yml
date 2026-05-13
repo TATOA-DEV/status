@@ -23,12 +23,6 @@ workflowSchedule:
   uptime: "*/15 * * * *"
 
 status-website:
-  baseUrl: /status
   name: TATOA Internal Status
   introTitle: TATOA 내부 시스템 상태
   introMessage: TATOA 백엔드 서비스의 실시간 가용성 모니터링.
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/TATOA-DEV/status
