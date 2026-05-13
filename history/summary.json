@@ -1,0 +1,58 @@
+[
+  {
+    "name": "BE Production",
+    "url": "https://be-prd.tatoaweb.com/actuator/health",
+    "icon": "https://icons.duckduckgo.com/ip3/be-prd.tatoaweb.com.ico",
+    "slug": "be-production",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 652,
+    "timeDay": 652,
+    "timeWeek": 652,
+    "timeMonth": 652,
+    "timeYear": 652,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "BE Staging",
+    "url": "https://be-stg.tatoa-web-y.com/actuator/health",
+    "icon": "https://icons.duckduckgo.com/ip3/be-stg.tatoa-web-y.com.ico",
+    "slug": "be-staging",
+    "status": "up",
+    "uptime": "91.46%",
+    "uptimeDay": "91.46%",
+    "uptimeWeek": "91.46%",
+    "uptimeMonth": "91.46%",
+    "uptimeYear": "91.46%",
+    "time": 524,
+    "timeDay": 524,
+    "timeWeek": 524,
+    "timeMonth": 524,
+    "timeYear": 524,
+    "dailyMinutesDown": {
+      "2026-05-13": 31
+    }
+  },
+  {
+    "name": "BE Development",
+    "url": "https://be-dev.tatoa-web-y.com/actuator/health",
+    "icon": "https://icons.duckduckgo.com/ip3/be-dev.tatoa-web-y.com.ico",
+    "slug": "be-development",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 531,
+    "timeDay": 531,
+    "timeWeek": 531,
+    "timeMonth": 531,
+    "timeYear": 531,
+    "dailyMinutesDown": {}
+  }
+]
