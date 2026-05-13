@@ -1,31 +1,34 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# TATOA Internal Status Monitor
+owner: TATOA-DEV
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: BE Production
+    url: https://be-prd.tatoaweb.com/actuator/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 3000
+  - name: BE Staging
+    url: https://be-stg.tatoa-web-y.com/actuator/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 3000
+  - name: BE Development
+    url: https://be-dev.tatoa-web-y.com/actuator/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 3000
+
+workflowSchedule:
+  uptime: "*/15 * * * *"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  baseUrl: /status
+  name: TATOA Internal Status
+  introTitle: TATOA 내부 시스템 상태
+  introMessage: TATOA 백엔드 서비스의 실시간 가용성 모니터링.
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+      href: https://github.com/TATOA-DEV/status
