@@ -16,12 +16,7 @@
 
 name: Setup CI
 on:
-  push:
-    paths:
-      - ".upptimerc.yml"
-  repository_dispatch:
-    types: [setup]
-  workflow_dispatch:
+  workflow_dispatch:  # Disabled auto-trigger to preserve site.yml + update-template.yml customizations (data dir copy, live.html, cron freeze)
 jobs:
   release:
     name: Setup Upptime
