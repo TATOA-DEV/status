@@ -17,6 +17,10 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding: 32px; max-width: 800px; margin: 0 auto; }
+  .nav { display: flex; gap: 16px; margin-bottom: 24px; font-size: 14px; }
+  .nav a { color: var(--muted); text-decoration: none; padding: 4px 0; }
+  .nav a:hover { color: var(--up); }
+  .nav a.active { color: var(--text); border-bottom: 2px solid var(--up); }
   h1 { font-size: 24px; margin-bottom: 8px; }
   .subtitle { color: var(--muted); margin-bottom: 24px; font-size: 14px; }
   .controls { display: flex; gap: 12px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; }
@@ -39,6 +43,11 @@
 </head>
 <body>
 
+<nav class="nav">
+  <a href="/status/">📊 7-day history</a>
+  <a href="/status/live.html" class="active">⚡ Live ping</a>
+</nav>
+
 <h1>TATOA Live Status</h1>
 <p class="subtitle">실시간 BE actuator/health 직접 호출. 새로고침 시 즉시 갱신.</p>
 
@@ -51,8 +60,7 @@
 <div id="monitors"></div>
 
 <p class="footer">
-  Live ping board · CORS 허용된 origin에서만 fetch 가능 ·
-  <a href="/status/">7-day history (Upptime)</a>
+  Live ping board · CORS 허용된 origin에서만 fetch 가능
 </p>
 
 <script>
