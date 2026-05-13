@@ -28,3 +28,8 @@ status-website:
   name: TATOA Internal Status
   introTitle: TATOA 내부 시스템 상태
   introMessage: TATOA 백엔드 서비스의 실시간 가용성 모니터링.
+  navbar:
+    - title: 7-day history
+      href: /status/
+    - title: Live ping
+      href: /status/live.html
