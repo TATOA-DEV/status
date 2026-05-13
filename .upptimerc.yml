@@ -24,6 +24,7 @@ workflowSchedule:
 
 status-website:
   publish: true
+  baseUrl: /status
   name: TATOA Internal Status
   introTitle: TATOA 내부 시스템 상태
   introMessage: TATOA 백엔드 서비스의 실시간 가용성 모니터링.
