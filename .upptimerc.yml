@@ -20,7 +20,7 @@ sites:
     maxResponseTime: 3000
 
 workflowSchedule:
-  uptime: "*/15 * * * *"
+  uptime: "*/5 * * * *"
 
 status-website:
   publish: true
