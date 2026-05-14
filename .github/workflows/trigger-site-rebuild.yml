@@ -1,0 +1,28 @@
+name: Trigger Site Rebuild
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  trigger:
+    name: Dispatch Static Site CI
+    runs-on: ubuntu-latest
+    # Skip Upptime bot's own [skip ci] commits to avoid the 5-minute rebuild churn.
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Dispatch Static Site CI
+        # GITHUB_TOKEN cannot trigger other workflows (GitHub anti-loop policy),
+        # so a PAT with repo+workflow scopes is required in secrets.GH_PAT.
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::error::secrets.GH_PAT is not set. A PAT with repo+workflow scopes is required to dispatch Static Site CI."
+            exit 1
+          fi
+          gh workflow run "Static Site CI" --repo "${GITHUB_REPOSITORY}" --ref master
