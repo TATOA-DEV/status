@@ -24,6 +24,45 @@ With [Upptime](https://upptime.js.org), you can get your own unlimited and free 
 
 [**Visit our status website →**](https://TATOA-DEV.github.io/status)
 
+## 🏗️ Architecture
+
+이 저장소는 두 갈래의 모니터링을 함께 운영합니다. **알람 전송은 upptime이 단독으로 담당**합니다.
+
+| 구성요소 | 위치 | 주기 | 역할 | 알람 |
+| --- | --- | --- | --- | --- |
+| **Uptime CI** (upptime) | GitHub Actions Ubuntu 러너 | `*/5 * * * *` cron (실제 지연 있음, 아래 참고) | 실제 가용성 모니터링. `history/*.yml` 기록, GitHub Issue 자동 생성/종료 | `#alert-health` 채널로 전송 |
+| **`assets/live.html`** | 사용자 브라우저 | 30초 (페이지가 열려 있을 때만) | 시각 확인용 status badge. 페이지를 보고 있지 않으면 동작하지 않음 | 없음 (시각화 전용) |
+
+> **실행 간격 주의** — GitHub Actions cron은 짧은 간격을 충실히 보장하지 않습니다. 측정 기준(2026-05-16 ~ 05-19, 99회 실행) Uptime CI는 5분 설정에도 평균 약 40분, 중앙값 약 28분, 최대 약 100분 간격으로 실행되었습니다. 빠른 장애 감지가 필요한 경우 UptimeRobot 등 외부 모니터링 서비스 병행을 권장합니다.
+
+### Down 판정과 알람 흐름
+
+1. Uptime CI가 사이트별 `actuator/health` 엔드포인트를 호출합니다.
+2. 실패 시 자체적으로 **3회 재시도**합니다 (2초 → 10초 백오프). 한 번이라도 성공하면 즉시 정상으로 간주합니다.
+3. 3회 연속 실패해야 down으로 확정되며, 이때 `history/*.yml`이 갱신되고 GitHub Issue가 생성되며 Slack 알람이 전송됩니다.
+4. 복구되면 동일 채널로 복구 알람이 전송되고 Issue도 자동으로 닫힙니다.
+
+### Slack 알람 설정
+
+GitHub 저장소의 **Settings → Secrets and variables → Actions** 에 다음 세 가지가 등록되어 있어야 동작합니다.
+
+| Secret | 값 |
+| --- | --- |
+| `NOTIFICATION_SLACK` | `true` |
+| `NOTIFICATION_SLACK_WEBHOOK` | `true` |
+| `NOTIFICATION_SLACK_WEBHOOK_URL` | `#alert-health` 채널의 incoming webhook URL |
+
+webhook URL은 코드에 직접 두지 않습니다. Slack 메시지 형식은 `🛑 <site> is down ...` + Issue 링크입니다.
+
+### Issue 자동 할당
+
+`.upptimerc.yml`의 `assignees` 항목에 GitHub username을 등록하면 upptime이 생성한 Issue가 자동으로 할당됩니다. 현재 담당자: `nucbj`.
+
+### 운영 시 주의
+
+- `.github/workflows/*.yml` 파일들은 `Update Template CI`가 주기적으로 upptime 기본 템플릿으로 덮어씁니다. `.upptimerc.yml` 외에 workflow 파일을 직접 수정한 경우, PR 본문에 그 사실을 명시해 주세요.
+- `live.html`은 시각화 전용입니다. 어떤 알람 전송 코드도 추가하지 마세요. 페이지를 띄워 둔 브라우저의 일시적 네트워크 흔들림이 false positive 알람의 원인이 됩니다.
+
 ## 📄 License
 
 - Powered by: [Upptime](https://github.com/upptime/upptime)

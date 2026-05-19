@@ -2,6 +2,9 @@
 owner: TATOA-DEV
 repo: status
 
+assignees:
+  - nucbj
+
 sites:
   - name: BE Production
     url: https://be-prd.tatoaweb.com/actuator/health
