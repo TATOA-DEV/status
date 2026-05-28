@@ -1,7 +1,7 @@
 url: https://be-stg.tatoa-web-y.com/actuator/health
 status: up
 code: 200
-responseTime: 639
-lastUpdated: 2026-05-27T23:28:29.932Z
+responseTime: 488
+lastUpdated: 2026-05-28T23:29:25.712Z
 startTime: 2026-05-13T09:30:43.559Z
 generator: Upptime <https://github.com/upptime/upptime>
