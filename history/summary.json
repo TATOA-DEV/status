@@ -46,22 +46,22 @@
     "url": "https://be-dev.tatoa-web-y.com/actuator/health",
     "icon": "https://icons.duckduckgo.com/ip3/be-dev.tatoa-web-y.com.ico",
     "slug": "be-development",
-    "status": "down",
-    "uptime": "99.47%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "98.41%",
-    "uptimeMonth": "99.47%",
-    "uptimeYear": "99.47%",
+    "status": "up",
+    "uptime": "99.20%",
+    "uptimeDay": "93.11%",
+    "uptimeWeek": "97.43%",
+    "uptimeMonth": "99.20%",
+    "uptimeYear": "99.20%",
     "time": 577,
-    "timeDay": 599,
-    "timeWeek": 568,
+    "timeDay": 595,
+    "timeWeek": 569,
     "timeMonth": 577,
     "timeYear": 577,
     "dailyMinutesDown": {
       "2026-05-13": 37,
       "2026-06-02": 98,
       "2026-06-03": 62,
-      "2026-06-08": 0
+      "2026-06-08": 99
     }
   }
 ]
