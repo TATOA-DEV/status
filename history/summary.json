@@ -5,19 +5,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/be-prd.tatoaweb.com.ico",
     "slug": "be-production",
     "status": "up",
-    "uptime": "99.82%",
+    "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "99.82%",
-    "uptimeYear": "99.82%",
-    "time": 708,
-    "timeDay": 591,
-    "timeWeek": 731,
-    "timeMonth": 708,
-    "timeYear": 708,
-    "dailyMinutesDown": {
-      "2026-06-03": 77
-    }
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 711,
+    "timeDay": 860,
+    "timeWeek": 772,
+    "timeMonth": 711,
+    "timeYear": 711,
+    "dailyMinutesDown": {}
   },
   {
     "name": "BE Staging",
@@ -25,21 +23,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/be-stg.tatoa-web-y.com.ico",
     "slug": "be-staging",
     "status": "up",
-    "uptime": "99.66%",
+    "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "99.66%",
-    "uptimeYear": "99.66%",
-    "time": 788,
-    "timeDay": 501,
-    "timeWeek": 547,
-    "timeMonth": 788,
-    "timeYear": 788,
-    "dailyMinutesDown": {
-      "2026-05-13": 31,
-      "2026-05-14": 46,
-      "2026-06-03": 69
-    }
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 785,
+    "timeDay": 662,
+    "timeWeek": 582,
+    "timeMonth": 785,
+    "timeYear": 785,
+    "dailyMinutesDown": {}
   },
   {
     "name": "BE Development",
@@ -47,22 +41,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/be-dev.tatoa-web-y.com.ico",
     "slug": "be-development",
     "status": "up",
-    "uptime": "99.08%",
-    "uptimeDay": "93.15%",
-    "uptimeWeek": "98.04%",
-    "uptimeMonth": "99.08%",
-    "uptimeYear": "99.08%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 572,
-    "timeDay": 531,
-    "timeWeek": 555,
+    "timeDay": 605,
+    "timeWeek": 570,
     "timeMonth": 572,
     "timeYear": 572,
-    "dailyMinutesDown": {
-      "2026-05-13": 37,
-      "2026-06-02": 98,
-      "2026-06-03": 62,
-      "2026-06-08": 99,
-      "2026-06-11": 99
-    }
+    "dailyMinutesDown": {}
   }
 ]
