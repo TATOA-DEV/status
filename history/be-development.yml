@@ -1,7 +1,7 @@
 url: https://be-dev.tatoa-web-y.com/actuator/health
-status: down
-code: 503
-responseTime: 586
-lastUpdated: 2026-06-25T06:17:14.000Z
+status: up
+code: 200
+responseTime: 508
+lastUpdated: 2026-06-25T07:34:28.411Z
 startTime: 2026-05-13T09:30:44.486Z
 generator: Upptime <https://github.com/upptime/upptime>
