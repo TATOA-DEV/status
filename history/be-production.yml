@@ -1,7 +1,7 @@
 url: https://be-prd.tatoaweb.com/actuator/health
 status: up
 code: 200
-responseTime: 872
-lastUpdated: 2026-07-08T23:25:02.738Z
+responseTime: 561
+lastUpdated: 2026-07-09T23:27:41.280Z
 startTime: 2026-05-13T09:30:42.523Z
 generator: Upptime <https://github.com/upptime/upptime>
